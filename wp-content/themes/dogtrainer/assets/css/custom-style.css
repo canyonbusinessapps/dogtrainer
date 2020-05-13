@@ -2,7 +2,7 @@
 body{
     font-family:"Noto Sans" !important;	
     color: #242424 !important;
-    font-size: 15px !important;
+    font-size: 14px !important;
     font-weight: 200 !important;
     background:#fff !important;
     line-height: 30px;
@@ -10,6 +10,7 @@ body{
 p{
     margin:0px !important;
     line-height: 26px !important;
+    text-align: justify;
 }
 strong,b{
     font-family:"Noto Sans" !important;
@@ -46,15 +47,16 @@ strong,b{
 .top_social_menu .menu li a:link, a:visited {
     color: #FFFFFF !important;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
     text-decoration: none;
     margin-right: 10px;
-    -webkit-box-shadow: none;
+    width: 30px;
+    display: inline-block;
 }
 .top_social_menu .menu li a:hover {
-    color: #FFD800 !important;
-    text-decoration: none;
-    -webkit-box-shadow: none;
+    color: #000 !important;
+    background: rgba(255, 216, 0, .80);
+    border-radius: 50%;
 }
 .top_social_menu .menu-social-links-menu-container{
     float: right;
@@ -126,7 +128,7 @@ header#masthead{
     margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
-    height: 334px;
+    height: 371px;
     margin-top: -39px !important;
     position: relative;
     z-index: 9999;
@@ -167,6 +169,11 @@ header#masthead{
 {
     margin:0px 40px;
 }
+
+.service-box-title{
+    font-size: 24px !important;
+    margin-top: 20px;
+}
 .nopadding {
     padding: 0 !important;
     margin: 0 !important;
@@ -190,7 +197,7 @@ header#masthead nav.navbar{
     position:relative;
 }
 #top-menu > li > a {
-    padding:30px 20px !important;
+    padding:15px 15px !important;
 }
 
 #navbar #top-menu .current-menu-item a{
@@ -203,19 +210,23 @@ header#masthead nav.navbar{
     position: absolute;
     content: "";
     height: 3px;
-    background-color: #ff5e14;
-    width: 30px;
-    top: 0;
-    left:calc(50% - 15px);
+    background-color: #fdc300;
+    width: 75%;
+    left: 17px;
+    /*width: 50px;*/
+    top: 52px;
+    /*left:calc(50% - 25px);*/
 }
 #navbar #top-menu li:hover:before {
     position: absolute;
     content: "";
     height: 3px;
-    background-color: #ff5e14;
-    width: 30px;
-    top: 0;
-    left:calc(50% - 15px);
+    background-color: #fdc300;
+    width: 75%;
+    left: 17px;
+    /*width: 50px;*/
+    top: 52px;
+    /*left:calc(50% - 25px);*/
 }
 .custom_button{
     background: #0051A5;
@@ -223,9 +234,9 @@ header#masthead nav.navbar{
     padding: 10px 20px;
     line-height: 42px;
     height: 42px !important;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
-    font-family: "Noto Sans";
+    font-family:Poppins;
 }
 .custom_button:hover{
     color: #FFFFFF !important;
@@ -239,7 +250,7 @@ header#masthead nav.navbar{
     border-color: #ff5e14 !important;
     height: 50px !important;
     font-size: 20px !important;
-    font-family: "Noto Sans";
+    font-family:Poppins;
 }
 .btn-custom:hover {
     color: #FFFFFF !important;
@@ -260,18 +271,22 @@ header#masthead nav.navbar{
     color: #000000;
     font-size: 42px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-family:Poppins !important;
+    font-weight: 600;
     line-height: 50px;
     margin-bottom: 30px !important;
 }
 .about-container{
     background-color: rgb(0, 0, 0, .80);
-    padding: 20px;
+    padding: 50px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .about-box{
     clear: both;
     overflow: hidden;
-    padding-bottom: 25px;
+    padding-bottom: 35px;
     color: #FFFFFF;
 }
 .no-border .about-box{
@@ -306,17 +321,23 @@ header#masthead nav.navbar{
 }
 .home_make_appinment .title{
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 16px;
 }
 .home_make_appinment .contact{
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
+}
+.appoinment_list .vc_column-inner{
+    padding-top: 0px !important;
+}
+.appoinment_list .wpb_text_column{
+    margin-bottom: 0px;
 }
 .appoinment_block{
-    padding: 15px !important;   
+    padding: 40px !important;   
 }
 .appoinment_block:hover{
-    background-color: #F5DA84;
+    background-color: #FFD54D;
     cursor: pointer;
 }
 .btn-appoinment {
@@ -342,14 +363,16 @@ header#masthead nav.navbar{
     color: #FFF !important;
     background-color: #0051A5 !important;
     border-color: #0051A5 !important;
-    height: 60px !important;
-    font-size: 20px !important;
+    height: 40px !important;
+    font-size: 14px !important;
+    font-family:Poppins !important;
 }
 .btn-appoinment_inner:hover {
     color: #FFFFFF !important;
     background-color: #1D2945 !important;
     border-color: #1D2945 !important;
     text-decoration:none !important;
+    font-family:Poppins !important;
 }
 .make_app_input_inner{
     border: 1px solid #D7D7D7 !important;
@@ -428,13 +451,14 @@ header#masthead nav.navbar{
 .footer_content_top{
     background-color: #131726;
     color: #FFFFFF;
-    padding-top: 40px;
+    padding: 65px 20px;
 }
 .footer_content_top .widget-title{
     color: #FFFFFF;
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 600;
+    font-family:Poppins;
 }
 .footer_content_top .address-box{
     height: 35px;
@@ -457,6 +481,9 @@ header#masthead nav.navbar{
     float: right;
     color: #FFD800;
 }
+.footer_content_top .widget_instagram-feed-widget{
+    padding-left: 50px;
+}
 .footer_content_bottom{
     background-color: #111422;
     color: #FFFFFF;
@@ -473,6 +500,7 @@ a.copyright_link:hover{
 }
 .copyright_text{
     margin-top: 9px;
+    text-align: left;
 }
 /*footer social icon menu*/
 .social-menu ul {
@@ -489,15 +517,19 @@ a.copyright_link:hover{
 .social-menu li a:link, a:visited {
     color: #FFFFFF !important;
     text-align: center;
-    padding: 10px;
+    padding: 4px;
     text-decoration: none;
-    /*border-radius: 50%;*/
+    border-radius: 50%;
     margin-right: 10px;
     -webkit-box-shadow: none;
+    width: 40px;
+    display: inline-block;
+    border: 1px solid #999;
 }
 .social-menu li a:hover {
-    color: #FFD800 !important;
+    color: #000 !important;
     text-decoration: none;
+    background: rgba(255, 216, 0, .80);
 }
 /*footer bottom menu*/
 .footer-menu ul {
@@ -524,6 +556,11 @@ a.copyright_link:hover{
     text-decoration: none;
     -webkit-box-shadow: none;
 }
-
+h3{
+    font-family:Poppins !important;
+    font-weight: 500;
+    font-size: 20px !important;
+    margin-bottom: 30px;
+}
 
 

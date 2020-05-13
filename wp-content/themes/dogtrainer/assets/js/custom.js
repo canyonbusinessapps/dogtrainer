@@ -4,7 +4,7 @@ jQuery(".custom_search_form-trigger").click(function () {
 
 });
 
-jQuery(".appoinment_block").click(function() {
-  window.location = $(this).find("a").attr("href"); 
-  return false;
+jQuery(".appoinment_block").click(function () {
+    window.location = $(this).find("a").attr("href");
+    return false;
 });
