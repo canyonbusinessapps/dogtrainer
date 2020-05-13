@@ -1,6 +1,6 @@
 #skicky_header{display:none !important;}
 body{
-    font-family:"Hind" !important;	
+    font-family:"Noto Sans" !important;	
     color: #242424 !important;
     font-size: 15px !important;
     font-weight: 200 !important;
@@ -12,7 +12,7 @@ p{
     line-height: 26px !important;
 }
 strong,b{
-    font-family:Hind !important;
+    font-family:"Noto Sans" !important;
     font-weight:600 !important;
     font-size:30px !important;
 }
@@ -112,8 +112,8 @@ header#masthead{
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
-    padding: 20 !important;
-    margin: 0 !important;
+    padding: 20px !important;
+    margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
 }
@@ -122,11 +122,11 @@ header#masthead{
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
-    padding: 20 !important;
-    margin: 0 !important;
+    padding: 20px !important;
+    margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
-    height: 275px;
+    height: 334px;
     margin-top: -39px !important;
     position: relative;
     z-index: 9999;
@@ -136,8 +136,8 @@ header#masthead{
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
-    padding: 20 !important;
-    margin: 0 !important;
+    padding: 20px !important;
+    margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
 }
@@ -146,8 +146,8 @@ header#masthead{
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
-    padding: 20 !important;
-    margin: 0 !important;
+    padding: 20px !important;
+    margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
 }
@@ -225,7 +225,7 @@ header#masthead nav.navbar{
     height: 42px !important;
     font-size: 15px;
     font-weight: 600;
-    font-family: "Hind";
+    font-family: "Noto Sans";
 }
 .custom_button:hover{
     color: #FFFFFF !important;
@@ -239,6 +239,7 @@ header#masthead nav.navbar{
     border-color: #ff5e14 !important;
     height: 50px !important;
     font-size: 20px !important;
+    font-family: "Noto Sans";
 }
 .btn-custom:hover {
     color: #FFFFFF !important;
@@ -247,13 +248,13 @@ header#masthead nav.navbar{
 }
 
 .home_header{
-
 }
 .home_header .header_title{
     color: #FFD800;
     font-size: 20px;
     line-height: 50px;
     font-style: italic;
+    font-family: 'Courgette';
 }
 .home_header .header_content{
     color: #000000;
@@ -284,6 +285,7 @@ header#masthead nav.navbar{
 }
 .about-box .img_grayborder{
     float: left;
+    padding: 30px;
 }
 .appoinment_bg_container {
     position: relative !important;
@@ -300,6 +302,7 @@ header#masthead nav.navbar{
 .home_make_appinment .image{
     float: left; 
     margin-right: 20px;
+    height: 100px;
 }
 .home_make_appinment .title{
     text-transform: uppercase;
@@ -308,6 +311,13 @@ header#masthead nav.navbar{
 .home_make_appinment .contact{
     font-size: 20px;
     font-weight: 500;
+}
+.appoinment_block{
+    padding: 15px !important;   
+}
+.appoinment_block:hover{
+    background-color: #F5DA84;
+    cursor: pointer;
 }
 .btn-appoinment {
     color: #000 !important;
@@ -325,7 +335,26 @@ header#masthead nav.navbar{
 .make_app_input{
     background-color: #FEDF00 !important;
     border: 0px !important;
-    color: #000;
+    color: #666 !important;
+    text-align: left !important;
+}
+.btn-appoinment_inner {
+    color: #FFF !important;
+    background-color: #0051A5 !important;
+    border-color: #0051A5 !important;
+    height: 60px !important;
+    font-size: 20px !important;
+}
+.btn-appoinment_inner:hover {
+    color: #FFFFFF !important;
+    background-color: #1D2945 !important;
+    border-color: #1D2945 !important;
+    text-decoration:none !important;
+}
+.make_app_input_inner{
+    border: 1px solid #D7D7D7 !important;
+    color: #666;
+    text-align: left !important;
 }
 
 .margin_top_20{

@@ -71,7 +71,7 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
 
 html {
-    font-family: Hind;
+    font-family: "Noto Sans";
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -91,7 +91,7 @@ section {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    font-family: 'KalingaBold';
+    font-family: "Noto Sans";
     font-weight: normal;
 }
 
@@ -1485,7 +1485,7 @@ nav.navbar {
 }
 
 #top-menu > li > a {
-    font-family:Hind;
+    font-family:"Noto Sans";
     display: block;
     padding: 36px 13px 24px 13px;
     text-transform: uppercase;

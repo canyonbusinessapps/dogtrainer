@@ -19,7 +19,10 @@
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="icon" href="favicon.ico" type="image/x-icon" />
         <?php wp_head(); ?>
-        <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
     </head>
 
     <body <?php body_class(); ?>>

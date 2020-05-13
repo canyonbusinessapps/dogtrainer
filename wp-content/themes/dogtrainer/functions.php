@@ -581,6 +581,7 @@ function twentyseventeen_scripts() {
     }
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.bundle.min.js', array(), $theme_version, true);
 //    wp_enqueue_script('fontawesome-js', get_template_directory_uri() . '/assets/fontawesome/js/all.js', array(), $theme_version, true);
+    wp_enqueue_script('custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), $theme_version, true);
 }
 
 add_action('wp_enqueue_scripts', 'twentyseventeen_scripts');
