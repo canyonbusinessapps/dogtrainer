@@ -563,4 +563,49 @@ h3{
     margin-bottom: 30px;
 }
 
+.faq_list .vc_active{    
+}
+.faq_list h4{
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+.faq_list .vc_active .vc_tta-panel-heading{
+    background-color: #FFF !important;
+    border: #fff !important;
+    font-family:Poppins !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+.faq_list .vc_active .vc_tta-panel-body{
+    background-color: #FFF !important;
+    border-color: #FFFFFF !important;
+}
+.faq_list .vc_active .vc_tta-panel-title a {
+    color: #0051A5 !important;  
+    font-weight: 500 !important;    
+}
+.faq_list .vc_tta-panel-title a {
+    color: #777 !important;
+    font-weight: 500 !important;  
+}
 
+.faq_list .vc_tta-panel-heading{
+    background-color: #EDF3F9 !important;
+    border: #EDF3F9 !important;
+    font-family:Poppins !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}
+/*.faq_list .vc_active .vc_tta-controls-icon{
+    border-radius: 50%;
+    -webkit-box-shadow: none;
+    width: 40px !important;
+    display: inline-block !important;
+    padding: 20px 10px !important;
+    background-color: #0051A5;
+    color: #FFF !important;
+}*/
+.wpb-js-composer .vc_tta-color-chino.vc_tta-style-classic .vc_tta-controls-icon::after,
+.wpb-js-composer .vc_tta-color-chino.vc_tta-style-classic .vc_tta-controls-icon::before {
+    border: 2px solid #0051A5 !important;
+}
