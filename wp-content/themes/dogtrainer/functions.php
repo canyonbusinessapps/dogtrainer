@@ -430,17 +430,16 @@ function twentyseventeen_widgets_init() {
             )
     );
     register_sidebar(
-        array(
-            'name' => __('Home Page Box', 'twentyseventeen'),
-            'id' => 'home-box',
-            'description' => __('Add widgets here to appear in home page.', 'twentyseventeen'),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget' => '</section>',
-            'before_title' => '<h2 class="widget-title">',
-            'after_title' => '</h2>',
-        )
+            array(
+                'name' => __('Home Page Box', 'twentyseventeen'),
+                'id' => 'home-box',
+                'description' => __('Add widgets here to appear in home page.', 'twentyseventeen'),
+                'before_widget' => '<section id="%1$s" class="widget %2$s">',
+                'after_widget' => '</section>',
+                'before_title' => '<h2 class="widget-title">',
+                'after_title' => '</h2>',
+            )
     );
-
 }
 
 add_action('widgets_init', 'twentyseventeen_widgets_init');
@@ -511,7 +510,7 @@ function twentyseventeen_colors_css_wrap() {
     }
     ?>
     <style type="text/css" id="custom-theme-colors" <?php echo $customize_preview_data_hue; ?>>
-        <?php echo twentyseventeen_custom_colors_css(); ?>
+    <?php echo twentyseventeen_custom_colors_css(); ?>
     </style>
     <?php
 }
@@ -751,9 +750,7 @@ require get_parent_theme_file_path('/inc/customizer.php');
  */
 require get_parent_theme_file_path('/inc/icon-functions.php');
 
-
-function latestblog_func($atts)
-{
+function latestblog_func($atts) {
     ob_start();
     $postCount = 0;
     $numOfCols = 3;
@@ -779,14 +776,14 @@ function latestblog_func($atts)
     $numOfPosts = count(query_posts($args));
     query_posts($args);
     if (have_posts()) :
-    ?>
+        ?>
         <div class="row list-blog clearfix">
             <?php
             while (have_posts()) :
                 the_post();
                 $postCount++;
                 $post_id = get_the_ID();
-            ?>
+                ?>
                 <div class="blog-box col-md-4">
                     <div class="blog-inner">
                         <a href="<?php echo get_permalink($post_id) ?>">
@@ -812,7 +809,7 @@ function latestblog_func($atts)
             <?php endwhile;
             ?>
         </div>
-    <?php
+        <?php
         wp_reset_query();
     endif;
     $returnString = ob_get_contents();
@@ -821,3 +818,84 @@ function latestblog_func($atts)
 }
 
 add_shortcode('latestblog', 'latestblog_func');
+
+function meet_our_team($atts) {
+    ob_start();
+    $postCount = 0;
+    $numOfCols = 3;
+    $rowCount = 0;
+    if (get_query_var('paged')) {
+        $paged = get_query_var('paged');
+    } else if (get_query_var('page')) {
+        $paged = get_query_var('page');
+    } else {
+        $paged = 1;
+    }
+    remove_all_filters('posts_orderby');
+
+    $args = array(
+        'post_type' => 'our-teams',
+        'post_status' => 'publish',
+        'orderby' => 'rand',
+        'order' => 'ASC',
+        'posts_per_page' => 8,
+        'paged' => $paged
+    );
+    $numOfPosts = count(query_posts($args));
+    query_posts($args);
+    if (have_posts()) :
+        ?>
+        <div class="row our_team_list clearfix">
+            <?php
+            while (have_posts()) :
+                the_post();
+                $postCount++;
+                $post_id = get_the_ID();
+                ?>
+                <div class="content col-md-3 content_<?= $post_id ?>" onmouseover="our_team(<?= $post_id ?>)">
+                    <a href="<?php echo get_permalink($post_id) ?>">
+                        <div class="content-overlay"></div>
+                        <?php echo types_render_field("picture", array("alt" => get_the_title(), "proportional" => "false", "class" => "content-image img_" . $post_id . " ")); ?>
+                        <h3 class="title_<?= $post_id ?> team_name"><?php echo get_the_title(); ?></h3>
+                        <div class="content-details fadeIn-bottom">
+                            <h3 class="content-title"><?php echo get_the_title(); ?></h3>
+                            <p class="content-text"><?= wp_trim_words(get_the_content(), 15) ?></p>
+                            <div class="social_icon">
+                                <ul id="<?= $post_id ?>">
+                                    <li>
+                                        <a href="<?= types_render_field("facebook") ?>" target="_blank">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= types_render_field("twitter") ?>" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= types_render_field("instagram") ?>" target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= types_render_field("email") ?>" target="_blank">
+                                            <i class="fa fa-envelope"></i>
+                                        </a>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <?php endwhile;
+            ?>
+        </div>
+        <?php
+        wp_reset_query();
+    endif;
+    $returnString = ob_get_contents();
+    ob_end_clean();
+    return $returnString;
+}
+
+add_shortcode('meet_our_team', 'meet_our_team');
