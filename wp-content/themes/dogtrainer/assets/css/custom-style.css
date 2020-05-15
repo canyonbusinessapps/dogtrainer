@@ -595,6 +595,7 @@ h3{
     font-family:Poppins !important;
     font-size: 20px !important;
     font-weight: 500 !important;
+    padding: 10px 0px 10px 10px;
 }
 /*.faq_list .vc_active .vc_tta-controls-icon{
     border-radius: 50%;
@@ -607,5 +608,51 @@ h3{
 }*/
 .wpb-js-composer .vc_tta-color-chino.vc_tta-style-classic .vc_tta-controls-icon::after,
 .wpb-js-composer .vc_tta-color-chino.vc_tta-style-classic .vc_tta-controls-icon::before {
-    border: 2px solid #0051A5 !important;
+    border: 2px solid #0051A5 !important;    
+}
+.wpb-js-composer .vc_tta .vc_tta-controls-icon {
+    width: 16px !important;
+    height: 16px !important;    
+    font-family:Poppins !important;
+    font-weight: 400;
+}
+
+.contact_block{
+}
+.contact_block .content{
+    color: #979797;
+    margin: 20px 0px;
+}
+.contact_block .address{
+    height: 45px;
+    border-bottom: 1px solid #DDD;
+    font-weight: 600;
+    margin-top: 12px;
+}
+.getin_touch_bg{
+    background: rgba(255, 255, 255, .80);
+    padding: 60px 140px;
+}
+.btn-getin_touch {
+    color: #FFF !important;
+    background-color: #0051A5 !important;
+    border-color: #0051A5 !important;
+    height: 40px !important;
+    font-size: 14px !important;
+    font-family:Poppins !important;
+    width: 100% !important;
+}
+.btn-getin_touch:hover {
+    color: #FFFFFF !important;
+    background-color: #1D2945 !important;
+    border-color: #1D2945 !important;
+    text-decoration:none !important;
+    font-family:Poppins !important;
+    width: 100% !important;
+}
+.getin_touch_input{
+    border: 1px solid #CAC9C7 !important;
+    color: #666;
+    text-align: left !important;
+    background: rgba(202, 202, 201, .80) !important;
 }
