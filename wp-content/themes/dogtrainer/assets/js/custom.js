@@ -12,9 +12,9 @@ jQuery(".appoinment_block").click(function () {
 function our_team(teamid) {
     jQuery('.content_' + teamid).hover(function () {
         jQuery(".title_" + teamid).addClass("text_white");
-//        jQuery(".img_" + teamid).animate({width: "100px", height: "100px"}, 10);
+        jQuery(".img_" + teamid).addClass("content-image-border");
     }, function () {
         jQuery(".title_" + teamid).removeClass("text_white");
-//        jQuery(".img_" + teamid).animate({width: "100%", height: "100%"}, 10);
+        jQuery(".img_" + teamid).removeClass("content-image-border");
     });
 }

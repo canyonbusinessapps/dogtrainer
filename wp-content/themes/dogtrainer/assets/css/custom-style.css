@@ -669,11 +669,14 @@ h3{
     font-size: 18px !important;
     color: #000000;
 }
-/*
-.our_team_list:hover .team_name,
-.our_team_list:focus .team_name {
-  color: #FFF !important;
-}*/
+.our_team_list .content-image-border {
+    border-left: 30px solid #FFF;
+    border-bottom: 30px solid #FFF;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 .our_team_list a:link, a:visited {
     color: #000000 !important;
     text-decoration: none;
@@ -692,9 +695,9 @@ h3{
 .our_team_list .content .content-overlay {
     background: rgba(38, 107, 178, 0.9);
     position: absolute;
-    height: 83%;
+    height: 72%;
     width: 80%;
-    left: 0;
+    left: 14px;
     top: 35px;
     bottom: 0;
     right: 0;
@@ -727,7 +730,7 @@ h3{
 }
 .our_team_list .content:hover .content-details{
     top: 50%;
-    left: 50%;
+    left: 55%;
     opacity: 1;    
 }
 .our_team_list .content-details h3{
@@ -735,7 +738,7 @@ h3{
     font-family:Poppins !important;
     font-weight: 500;
     letter-spacing: 0.01em;
-    margin-top: 280px;
+    margin-top: 160px;
     margin-bottom: 10px;
     text-transform: uppercase;
     font-size: 16px !important;

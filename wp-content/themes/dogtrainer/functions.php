@@ -852,40 +852,45 @@ function meet_our_team($atts) {
                 $postCount++;
                 $post_id = get_the_ID();
                 ?>
-                <div class="content col-md-3 content_<?= $post_id ?>" onmouseover="our_team(<?= $post_id ?>)">
-                    <a href="<?php echo get_permalink($post_id) ?>">
-                        <div class="content-overlay"></div>
-                        <?php echo types_render_field("picture", array("alt" => get_the_title(), "proportional" => "false", "class" => "content-image img_" . $post_id . " ")); ?>
-                        <h3 class="title_<?= $post_id ?> team_name"><?php echo get_the_title(); ?></h3>
-                        <div class="content-details fadeIn-bottom">
+                <script>
+                    jQuery(document).ready(function () {
+                        our_team(<?= $post_id ?>);
+                    });
+                </script>
+                <div class="content col-md-3 content_<?= $post_id ?>" onmouseover="our_team(<?= $post_id ?>)">                    
+                    <div class="content-overlay"></div>
+                    <?php echo types_render_field("picture", array("alt" => get_the_title(), "proportional" => "false", "class" => "content-image img_" . $post_id . " ")); ?>
+                    <h3 class="title_<?= $post_id ?> team_name"><?php echo get_the_title(); ?></h3>
+                    <div class="content-details fadeIn-bottom">
+                        <a href="<?php echo get_permalink($post_id) ?>" target="_blank">
                             <h3 class="content-title"><?php echo get_the_title(); ?></h3>
                             <p class="content-text"><?= wp_trim_words(get_the_content(), 15) ?></p>
-                            <div class="social_icon">
-                                <ul id="<?= $post_id ?>">
-                                    <li>
-                                        <a href="<?= types_render_field("facebook") ?>" target="_blank">
-                                            <i class="fab fa-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= types_render_field("twitter") ?>" target="_blank">
-                                            <i class="fab fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= types_render_field("instagram") ?>" target="_blank">
-                                            <i class="fab fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="<?= types_render_field("email") ?>" target="_blank">
-                                            <i class="fa fa-envelope"></i>
-                                        </a>
-                                    </li>
-                                </ul> 
-                            </div>
+                        </a>
+                        <div class="social_icon">
+                            <ul id="<?= $post_id ?>">
+                                <li>
+                                    <a href="<?= types_render_field("facebook") ?>" target="_blank">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?= types_render_field("twitter") ?>" target="_blank">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?= types_render_field("instagram") ?>" target="_blank">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="<?= types_render_field("email") ?>" target="_blank">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </li>
+                            </ul> 
                         </div>
-                    </a>
+                    </div>                    
                 </div>
             <?php endwhile;
             ?>
