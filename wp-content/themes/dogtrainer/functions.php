@@ -777,37 +777,33 @@ function latestblog_func($atts) {
     query_posts($args);
     if (have_posts()) :
         ?>
-        <div class="row list-blog clearfix">
-            <?php
-            while (have_posts()) :
-                the_post();
-                $postCount++;
-                $post_id = get_the_ID();
-                ?>
-                <div class="blog-box col-md-4">
-                    <div class="blog-inner">
-                        <a href="<?php echo get_permalink($post_id) ?>">
+        <div class="blog_container"> 
+            <div class="row list-blog clearfix">
+                <?php
+                while (have_posts()) :
+                    the_post();
+                    $postCount++;
+                    $post_id = get_the_ID();
+                    ?>
+                    <div class="blog-box col-md-4">
+                        <div class="blog-inner">
                             <div class="blog-thumbnail">
                                 <?= the_post_thumbnail() ?>
                             </div>
-                            <div class="author-info">By <?= get_the_author() ?> &nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp; <?= get_the_date('F j, Y') ?></div>
                             <div class="blog-info clearfix">
-                                <div class="blog-name">
-                                    <h3><?php echo get_the_title(); ?></h3>
-                                </div>
+                                <div class="date-info"><?= get_the_date('j.F.Y') ?></div>
+                                <div class="blog-name"><?php echo get_the_title(); ?></div>
+                                <div class="author-info"><i class="fa fa-user"></i> <?= get_the_author() ?> &nbsp;&nbsp; | &nbsp;&nbsp; <i class="fa fa-comments"></i> <?= get_comments_number() ?> &nbsp;&nbsp; | &nbsp;&nbsp; <i class="fa fa-thumbs-up"></i> 0 &nbsp;&nbsp; | &nbsp;&nbsp; <i class="fa fa-share-alt"></i></div>
                                 <div class="blog-subtitle">
-                                    <?= wp_trim_words(get_the_content(), 29) ?>
+                                    <?= wp_trim_words(get_the_content(), 20) ?>
                                 </div>
-                                <div>
-                                    <a href="<?= the_permalink() ?>">Read More</a>
-                                    <span class="pull-right"><i class="fa fa-comments"></i> Comments <?= get_comments_number() ?></span>
-                                </div>
+                                <a class="blog_read_more" href="<?= the_permalink() ?>">Read More</a>
                             </div>
-                        </a>
+                        </div>
                     </div>
-                </div>
-            <?php endwhile;
-            ?>
+                <?php endwhile;
+                ?>
+            </div>
         </div>
         <?php
         wp_reset_query();

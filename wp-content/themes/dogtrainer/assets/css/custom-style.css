@@ -262,14 +262,14 @@ header#masthead nav.navbar{
 }
 .home_header .header_title{
     color: #FFD800;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 50px;
     font-style: italic;
     font-family: 'Courgette';
 }
 .home_header .header_content{
     color: #000000;
-    font-size: 42px;
+    font-size: 36px;
     text-transform: uppercase;
     font-family:Poppins !important;
     font-weight: 600;
@@ -277,8 +277,8 @@ header#masthead nav.navbar{
     margin-bottom: 30px !important;
 }
 .about-container{
-    background-color: rgb(0, 0, 0, .80);
-    padding: 50px !important;
+    /*background-color: rgb(0, 0, 0, .80);*/
+    /*padding: 50px !important;*/
     position: absolute;
     top: 0;
     left: 0;
@@ -287,30 +287,43 @@ header#masthead nav.navbar{
     clear: both;
     overflow: hidden;
     padding-bottom: 35px;
-    color: #FFFFFF;
+    color: #FFFFFF;    
 }
 .no-border .about-box{
     border-bottom:none !important;
 }
 .about-box .info{
     width: calc(100% - 100px);
+    display:table-cell; 
 }
 .about-box .info strong{
     color: #FFD800;
+    font-family:Poppins !important;
+    font-weight: 600px !important;
+    font-size: 20px !important;
+    text-transform: uppercase;
 }
 .about-box .img_grayborder{
     float: left;
-    padding: 30px;
+    padding: 0px 30px 30px 30px;
+    display:table-cell; 
+    min-width: 130px;
+    margin: auto;
+    text-align: center;
 }
 .appoinment_bg_container {
     position: relative !important;
 }
 .appoinment_bg{
-    background-color: rgb(253, 195, 0, .90);
+    /*background-color: rgb(253, 195, 0, .90);*/
     /*margin-top: -39px !important;*/
     /*position: relative;*/
+    background-color: #FDC300;
     z-index: 10;
     margin-bottom: 100px;
+}
+.min_height_0{
+    min-height: 0px !important;
 }
 .home_make_appinment{
 }
@@ -342,22 +355,30 @@ header#masthead nav.navbar{
 }
 .btn-appoinment {
     color: #000 !important;
-    background-color: #FFF !important;
-    border-color: #FFF !important;
-    height: 60px !important;
-    font-size: 20px !important;
+    background-color: #FFFFFF !important;
+    border-color: #FFFFFF !important;
+    height: 50px !important;
+    font-size: 14px !important;
+    font-family:Poppins !important;
 }
 .btn-appoinment:hover {
     color: #FFFFFF !important;
     background-color: #1D2945 !important;
     border-color: #1D2945 !important;
     text-decoration:none !important;
+    font-family:Poppins !important;
 }
 .make_app_input{
     background-color: #FEDF00 !important;
     border: 0px !important;
     color: #666 !important;
     text-align: left !important;
+    height: 50px !important;
+    font-family:"Noto Sans" !important;	
+}
+.make_app_textarea_home{
+    height: 240px !important;
+    font-family:"Noto Sans" !important;	
 }
 .btn-appoinment_inner {
     color: #FFF !important;
@@ -376,12 +397,29 @@ header#masthead nav.navbar{
 }
 .make_app_input_inner{
     border: 1px solid #D7D7D7 !important;
-    color: #666;
+    color: #666 !important;
     text-align: left !important;
+    font-family:"Noto Sans" !important;	
+}
+.make_app_textarea{
+    height: 270px !important;
+    font-family:"Noto Sans" !important;	
+}
+.make_app_select{
+    content: "\f078";
+    font-family: FontAwesome !important;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .margin_top_20{
     margin-top: 20px;
+}
+.margin_top_30{
+    margin-top: 30px;
+}
+.margin_top_40{
+    margin-top: 40px;
 }
 .margin_top_50{
     margin-top: 50px;
@@ -397,24 +435,61 @@ header#masthead nav.navbar{
 }
 
 .list-blog{
-    margin:40px 0px;
+    margin:50px 0px;    
 }
 .list-blog .blog-box{
-    margin:15px 0px;
+    border: 15px solid #FFF;
+    padding: 0px;
+    margin: 0px;
+    background-color: #FCFBFB;
+
+}
+.blog_container .row {
+    display: table;
+}
+
+.blog_container .row [class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+.blog_read_more a:link, a:visited, a:hover{
+    color: #FFD800;
+    font-weight: 500;
+}
+.list-blog .blog-box .blog-info{
+    padding: 25px;
+}
+.list-blog .blog-box .date-info{
+    background-color: #0051A5;
+    padding: 5px;
+    color: #FFF;
+    text-align: center;
+    width: 120px;
+    position: relative;
+    top: -40px;
+    display: inline-block;
+    font-weight: 600;
+    font-family: Poppins !important;
 }
 .list-blog .blog-box .blog-inner{
-    background:#f0eded;
-    padding:20px;
+    /*background:#f0eded;*/
     overflow:hidden;
 }
 .list-blog .blog-box .blog-inner .blog-thumbnail img{
     width:100%
 }
 .list-blog .blog-box .blog-name{	
-    margin: 0px -20px;	
+    margin: -15px 0px;
+    font-family: Poppins !important;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
 }
 .list-blog .blog-inner .author-info{
     margin: 10px 0px;
+    color: #BEBEBE;
+    margin-top: 20px;
 }
 .list-blog .blog-box a{
     text-decoration:none !important;
@@ -427,16 +502,15 @@ header#masthead nav.navbar{
 }
 .list-blog .blog-box .blog-subtitle{
     color:#061538;
-    margin-top:20px !important;
-    border-bottom: 1px solid #ccc;
+    margin-top:10px !important;
 }
 .list-blog .blog-box:hover h3{
-    color:#ff5e14 !important;
+    /*color:#ff5e14 !important;*/
 }
 .list-blog .blog-box:hover i{
-    color:#ff5e14 !important;
+    /*color:#ff5e14 !important;*/
 }
-.list-blog .blog-box:hover .blog-inner{
+.list-blog .blog-box:hover{
     background:#fff !important;
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
@@ -445,7 +519,6 @@ header#masthead nav.navbar{
 .list-blog .pull-right{
     float: right;
 }
-
 
 /*Footer CSS*/
 .footer_content_top{
@@ -501,6 +574,8 @@ a.copyright_link:hover{
 .copyright_text{
     margin-top: 9px;
     text-align: left;
+    color: #bebebe;
+    font-size: 13px;
 }
 /*footer social icon menu*/
 .social-menu ul {
@@ -544,12 +619,13 @@ a.copyright_link:hover{
     text-decoration: none;
 }
 .footer-menu li a:link, a:visited {
-    color: #FFFFFF !important;
+    color: #bebebe !important;
     text-align: center;
     padding: 10px;
     text-decoration: none;
     margin-right: 10px;
     -webkit-box-shadow: none;
+    font-size: 13px;
 }
 .footer-menu li a:hover {
     color: #FFD800 !important;
@@ -561,6 +637,9 @@ h3{
     font-weight: 500;
     font-size: 20px !important;
     margin-bottom: 30px;
+}
+#sbi_images{
+    padding: 5px 5px 5px 0px !important;
 }
 
 .faq_list .vc_active{    
@@ -622,12 +701,16 @@ h3{
 .contact_block .content{
     color: #979797;
     margin: 20px 0px;
+    font-family:"Noto Sans";
+    font-size: 16px;
 }
 .contact_block .address{
     height: 45px;
     border-bottom: 1px solid #DDD;
     font-weight: 600;
     margin-top: 12px;
+    font-family:"Noto Sans";
+    font-size: 16px;
 }
 .getin_touch_bg{
     background: rgba(255, 255, 255, .80);
