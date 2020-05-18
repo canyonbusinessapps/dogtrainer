@@ -441,7 +441,7 @@ header#masthead nav.navbar{
     border: 15px solid #FFF;
     padding: 0px;
     margin: 0px;
-    background-color: #FCFBFB;
+    background-color: #f7f7f7;
 
 }
 .blog_container .row {
@@ -490,6 +490,7 @@ header#masthead nav.navbar{
     margin: 10px 0px;
     color: #BEBEBE;
     margin-top: 20px;
+    font-size: 13px;
 }
 .list-blog .blog-box a{
     text-decoration:none !important;
