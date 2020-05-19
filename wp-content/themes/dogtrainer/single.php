@@ -1,9 +1,11 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The template for displaying all single our team posts
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
+ * Template Name: Our Team
+ * Template Post Type: post
  * @package WordPress
  * @subpackage Twenty_Seventeen
  * @since Twenty Seventeen 1.0
@@ -11,30 +13,67 @@
  */
 get_header();
 ?>
-<div class="wrap">
-    <div id="primary" class="content-area">
-        <main id="main" class="site-main" role="main">
-            <?php
-            // Start the Loop.
-            while (have_posts()) :
-                the_post();
-                get_template_part('template-parts/post/content', get_post_format());
-                // If comments are open or we have at least one comment, load up the comment template.
-                if (comments_open() || get_comments_number()) :
-                    comments_template();
-                endif;
-                the_post_navigation(
-                        array(
-                            'prev_text' => '<span class="screen-reader-text">' . __('Previous Post', 'twentyseventeen') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Previous', 'twentyseventeen') . '</span> <span class="nav-title"><span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg(array('icon' => 'arrow-left')) . '</span>%title</span>',
-                            'next_text' => '<span class="screen-reader-text">' . __('Next Post', 'twentyseventeen') . '</span><span aria-hidden="true" class="nav-subtitle">' . __('Next', 'twentyseventeen') . '</span> <span class="nav-title">%title<span class="nav-title-icon-wrapper">' . twentyseventeen_get_svg(array('icon' => 'arrow-right')) . '</span></span>',
-                        )
-                );
-            endwhile; // End the loop.
+<div class="container margin_top_210 margin_bottom_105">
+    <div class="row" style="padding-bottom: 40px;">
+        <div class="col-md-12">
+            <a href="<?= esc_url(get_page_link(13)) ?>" class="back_our_team">< Back</a>
+        </div>
+    </div>
+    <div class="row team_inner">        
+        <?php
+        // Start the Loop.
+        while (have_posts()) :
+            the_post();
             ?>
-        </main><!-- #main -->
-    </div><!-- #primary -->
-    <?php get_sidebar(); ?>
-</div><!-- .wrap -->
+            <div class="col-md-4">
+                <?php echo types_render_field("picture", array("alt" => get_the_title(), "proportional" => "false", "class" => "content-image img_" . $post_id . " ")); ?>
+            </div>
+            <div class="col-md-8">
+                <h2 class="team_title"><?php echo get_the_title(); ?></h2>
+                <h2 class="team_designation"><?php echo types_render_field("designation"); ?></h2>
+                <div class="social_icon">
+                    <ul>
+                        <li>
+                            <a href="<?= types_render_field("facebook") ?>" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= types_render_field("twitter") ?>" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= types_render_field("instagram") ?>" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= types_render_field("email") ?>" target="_blank">
+                                <i class="fa fa-envelope"></i>
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+                <p><?= get_the_content() ?></p>
+            </div>
+            <?php
+        endwhile; // End the loop.
+        ?>
+    </div>
+</div>
+<div class="team_inner_container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="home_header text-center margin_top_100 margin_bottom_50">
+                    <div class="header_content text-center">YOU MAY ALSO LIKE</div>
+                </div>
+                <?php echo do_shortcode('[meet_our_team]'); ?>
+            </div>
+        </div>
+    </div>    
+</div>
 
 <?php
 get_footer();

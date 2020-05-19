@@ -436,6 +436,9 @@ header#masthead nav.navbar{
 .margin_top_120{
     margin-top: 120px;
 }
+.margin_top_210{
+    margin-top: 210px;
+}
 .margin_bottom_20{
     margin-bottom: 20px;
 }
@@ -644,7 +647,7 @@ header#masthead nav.navbar{
     color: #000;
     letter-spacing: 1px;
 }
-.widget_recent_entries a.post_title:link, a.post_title:hover{
+.widget_recent_entries a.post_title:link, a.post_title:visited{
     font-family: Poppins !important;
     font-weight: 600;
     font-size: 14px;
@@ -653,6 +656,9 @@ header#masthead nav.navbar{
     text-decoration: none;
     text-transform: uppercase;
     line-height: 30px;
+}
+.widget_recent_entries a.post_title:hover{
+    color: #FDC300;
 }
 .widget_recent_entries .post_date{
     font-size: 13px;
@@ -700,7 +706,34 @@ header#masthead nav.navbar{
 .widget_media_image{
     margin-top: 50px;
 }
-
+.blog_single_title{
+    font-family: Poppins !important;
+    font-weight: 600;
+    font-size: 32px;
+    color: #000;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.blog_single_info{
+    color: #888;
+    margin: 10px 0px;
+}
+.form-submit .submit{
+    margin-top: 20px;
+    background: #0051A5;
+    color: #fff;
+    padding: 10px 20px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family:Poppins;
+}
+.form-submit .submit:hover{
+    color: #FFFFFF !important;
+    background-color: #1D2945 !important;
+    border-color: #1D2945 !important;
+    text-decoration:none !important;
+}
 /*Footer CSS*/
 .footer_content_top{
     background-color: #131726;
@@ -1051,3 +1084,72 @@ h3{
     /*background: rgba(255, 255, 255, .80);*/
     background-color: #FFF;
 }
+.team_inner{
+
+}
+.team_inner .team_title {
+    color: #000000;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-family: Poppins !important;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 15px !important;
+    margin-top: 40px !important;
+}
+.team_inner .team_designation{
+    font-size: 16px;
+    color: #666;
+}
+.team_inner .social_icon{
+    margin: 20px 0px;
+    color: #FFF;
+}
+/*Our team inner social icon menu*/
+.team_inner ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.team_inner li {
+    float: left;
+    border: none !important;
+    text-decoration: none;
+}
+.team_inner li a:link, a:visited {
+    color: #000 !important;
+    text-align: center;
+    padding: 0px;
+    text-decoration: none;
+    border-radius: 50%;
+    margin-right: 5px;
+    -webkit-box-shadow: none;
+    width: 30px;
+    display: inline-block;
+    border: 1px solid #888;
+    background-color: #FFF;
+}
+.team_inner li a:hover {
+    color: #000 !important;
+    text-decoration: none;
+    background-color: #FCD048;
+}
+.team_inner_container{
+    background-color: #F6F6F6;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    padding-bottom: 60px;
+}
+a.back_our_team:link, a.back_our_team:hover, a.back_our_team:visited{
+    padding-bottom: 50px;
+    font-size: 22px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    font-family: Poppins !important;
+}
+
+
