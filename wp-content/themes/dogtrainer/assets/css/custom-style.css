@@ -1159,15 +1159,13 @@ a.back_our_team:link, a.back_our_team:hover, a.back_our_team:visited{
     left: 50%;
 }
 
-
-
 .testimonial-list{
     background: rgba(0, 0, 0, .50);
     color: #FFF;
 }
 .testimonial{
     text-align: left;
-    margin: 75px;
+    margin: 60px;
 }
 .testimonial .description{
     font-size: 1.15em;
@@ -1241,6 +1239,9 @@ a.back_our_team:link, a.back_our_team:hover, a.back_our_team:visited{
     cursor: pointer;
     width: 40px;
     float: left;
+}
+.owl-wrapper{
+    padding-bottom: 0px;
 }
 .testimonial-text{
     font-family:"Noto Sans";

@@ -981,11 +981,11 @@ function testimonial_home($atts) {
 
     $args = array(
         'post_type' => 'post',
-        'cat' => '5',
+        'cat' => 11,
         'post_status' => 'publish',
         'orderby' => 'rand',
         'order' => 'ASC',
-        'posts_per_page' => 3,
+        'posts_per_page' => 10,
         'paged' => $paged
     );
     $numOfPosts = count(query_posts($args));
@@ -999,44 +999,17 @@ function testimonial_home($atts) {
                         <?php
                         while (have_posts()) :
                             the_post();
-                            $postCount++;
-                            $post_id = get_the_ID();
-                            ?>
-                            <div class="blog-box col-md-4">
-                                <div class="blog-inner">
-                                    <div class="blog-thumbnail">
-                                        <?= the_post_thumbnail() ?>
-                                    </div>
-                                    <div class="blog-info clearfix">
-                                        <div class="date-info"><?= get_the_date('j.F.Y') ?></div>
-                                        <div class="blog-name"><?php echo get_the_title(); ?></div>
-                                        <div class="author-info"><i class="fa fa-user"></i> <?= get_the_author() ?> &nbsp;&nbsp; | &nbsp;&nbsp; <i class="fa fa-comments"></i> <?= get_comments_number() ?> &nbsp;&nbsp; | &nbsp;&nbsp; <i class="fa fa-thumbs-up"></i> 0 &nbsp;&nbsp; | &nbsp;&nbsp; <i class="fa fa-share-alt"></i></div>
-                                        <div class="blog-subtitle">
-                                            <?= wp_trim_words(get_the_content(), 20) ?>
-                                        </div>
-                                        <a class="blog_read_more" href="<?= the_permalink() ?>">Read More</a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php endwhile;
-                        ?>
-
-                        <?php
-                        while (have_posts()) :
-                            the_post();
-                            $postCount++;
-                            $post_id = get_the_ID();
                             ?>
                             <div class="testimonial">
                                 <div class="row">
                                     <div class="col-md-10 testimonial-text">
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                        <?= get_the_content() ?>
                                     </div>
                                     <div class="col-md-2">
                                         <div class="testimonial-image-box">
-                                            <img src="http://localhost:8888/dogtrainer/wp-content/uploads/2020/05/testimonial_avatar-2.png" alt="" class="img-responsive testimonial-image">
+                                            <?= the_post_thumbnail('thumbnail', array('class' => 'img-responsive testimonial-image')) ?>
                                         </div>                                
-                                        <div class="testimonial-name">Lorem Ipsum</div>
+                                        <div class="testimonial-name"><?php echo get_the_title(); ?></div>
                                     </div>
                                 </div>
                             </div>
