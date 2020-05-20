@@ -18,3 +18,16 @@ function our_team(teamid) {
         jQuery(".img_" + teamid).removeClass("content-image-border");
     });
 }
+
+jQuery(document).ready(function () {
+    jQuery("#testimonial-slider").owlCarousel({
+        items: 1,
+        itemsDesktop: [1000, 1],
+        itemsDesktopSmall: [979, 1],
+        itemsTablet: [768, 1],
+        pagination: false,
+        navigation: true,
+        navigationText: ["", ""],
+        autoPlay: false
+    });
+});

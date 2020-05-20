@@ -13,6 +13,17 @@
  */
 get_header();
 ?>
+<style>
+    #top-menu > li > a {
+        color: #000 !important;
+    }
+    .team_inner li a:link, a:visited {
+        color: #000 !important;
+    }
+    .team_inner li a:hover {
+        color: #555 !important;
+    }
+</style>
 <div class="container margin_top_210 margin_bottom_105">
     <div class="row" style="padding-bottom: 40px;">
         <div class="col-md-12">
@@ -74,6 +85,14 @@ get_header();
         </div>
     </div>    
 </div>
-
+<div class="bottom_contact_container">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <?php echo do_shortcode('[bottom_contact]'); ?>
+            </div>
+        </div>
+    </div>    
+</div>
 <?php
 get_footer();

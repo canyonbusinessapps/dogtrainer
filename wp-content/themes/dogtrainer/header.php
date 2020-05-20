@@ -23,6 +23,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"> 
         <link href='https://fonts.googleapis.com/css?family=Courgette' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     </head>
 
     <body <?php body_class(); ?>>
