@@ -830,6 +830,10 @@ add_shortcode('latestblog', 'latestblog_func');
 
 function meet_our_team($atts) {
     ob_start();
+    extract(shortcode_atts(array(
+        'ppp' => 'ppp'
+                    ), $atts));
+
     $postCount = 0;
     $numOfCols = 3;
     $rowCount = 0;
@@ -847,7 +851,7 @@ function meet_our_team($atts) {
         'post_status' => 'publish',
         'orderby' => 'rand',
         'order' => 'ASC',
-        'posts_per_page' => 8,
+        'posts_per_page' => (int) $ppp,
         'paged' => $paged
     );
     $numOfPosts = count(query_posts($args));
@@ -879,7 +883,7 @@ function meet_our_team($atts) {
                             <ul id="<?= $post_id ?>">
                                 <li>
                                     <a href="<?= types_render_field("facebook") ?>" target="_blank">
-                                        <i class="fab fa-facebook"></i>
+                                        <i class="fab fa-facebook-f"></i>
                                     </a>
                                 </li>
                                 <li>

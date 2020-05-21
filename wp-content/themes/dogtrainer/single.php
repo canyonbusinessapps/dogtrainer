@@ -46,7 +46,7 @@ get_header();
                     <ul>
                         <li>
                             <a href="<?= types_render_field("facebook") ?>" target="_blank">
-                                <i class="fab fa-facebook"></i>
+                                <i class="fab fa-facebook-f"></i>
                             </a>
                         </li>
                         <li>
@@ -80,7 +80,7 @@ get_header();
                 <div class="home_header text-center margin_top_100 margin_bottom_50">
                     <div class="header_content text-center">YOU MAY ALSO LIKE</div>
                 </div>
-                <?php echo do_shortcode('[meet_our_team]'); ?>
+                <?php echo do_shortcode('[meet_our_team ppp=4]'); ?>
             </div>
         </div>
     </div>    
