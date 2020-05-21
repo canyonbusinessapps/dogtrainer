@@ -933,7 +933,7 @@ Class My_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
             ?>   
             <div class="row">
                 <?php while ($r->have_posts()) : $r->the_post(); ?>	
-                    <div class="col-md-4">
+                    <div class="col-md-4 margin_bottom_20">
                         <?= the_post_thumbnail() ?>
                     </div>
                     <div class="col-md-8 post_info">
