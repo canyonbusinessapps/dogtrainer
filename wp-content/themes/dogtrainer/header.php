@@ -28,6 +28,23 @@
     </head>
 
     <body <?php body_class(); ?>>
+        <nav id="header" class="navbar navbar-default fixed-top navbar-right" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+            <div class="container flex-container">
+                <div id="navbar" class="navbar-collapse collapse">
+                    <?php if (has_nav_menu('top')) : ?>
+                        <?php
+                        wp_nav_menu(array(
+                            'container' => '',
+                            'theme_location' => 'top',
+                            'menu_id' => 'top-menu',
+                            'menu_class' => 'menu ml-auto',
+                        ));
+                        ?>
+                    <?php endif; ?>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </nav>
         <div class="mainbg-wrapperd">
             <a class="skip-link screen-reader-text" href="#content"><?php _e('Skip to content', 'DogTrainerUS'); ?></a>
             <header id="masthead" class="site-header" role="banner">
@@ -58,22 +75,21 @@
                                 <?php the_custom_logo(); ?>
                             </div>
                             <div class="col-md-10">
-                                <nav class="navbar navbar-default navbar-right" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-                                    <div class="container flex-container">
-                                        <div id="navbar" class="navbar-collapse collapse">
-                                            <?php if (has_nav_menu('top')) : ?>
-                                                <?php
-                                                wp_nav_menu(array(
-                                                    'container' => '',
-                                                    'theme_location' => 'top',
-                                                    'menu_id' => 'top-menu',
-                                                ));
-                                                ?>
-                                            <?php endif; ?>
-                                        </div>
-                                        <!--/.nav-collapse -->
-                                    </div>
-                                </nav>
+                                <!--                                <nav class="navbar navbar-default navbar-right" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+                                                                    <div class="container flex-container">
+                                                                        <div id="navbar" class="navbar-collapse collapse">
+                                <?php
+//                                            if (has_nav_menu('top')) :
+//                                                wp_nav_menu(array(
+//                                                    'container' => '',
+//                                                    'theme_location' => 'top',
+//                                                    'menu_id' => 'top-menu',
+//                                                ));
+//                                            endif;
+                                ?>
+                                                                        </div>
+                                                                    </div>
+                                                                </nav>-->
                             </div>
                         </div>
                     </div>

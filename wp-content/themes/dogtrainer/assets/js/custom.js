@@ -31,3 +31,24 @@ jQuery(document).ready(function () {
         autoPlay: false
     });
 });
+
+/*
+ * Top sticky nav
+ * Sticky when foating
+ */
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+    stickyNav()
+};
+// Get the header
+var header = document.getElementById("header");
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+function stickyNav() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("nav-shadow");
+    } else {
+        header.classList.remove("nav-shadow");
+    }
+}
+
