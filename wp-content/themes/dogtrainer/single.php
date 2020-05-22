@@ -94,5 +94,10 @@ get_header();
         </div>
     </div>    
 </div>
+<script>
+    jQuery(document).ready(function () {
+        jQuery('.custom-logo').attr('src', '<?= get_site_url() ?>/wp-content/uploads/2020/05/logo_black.png');
+    });
+</script>
 <?php
 get_footer();

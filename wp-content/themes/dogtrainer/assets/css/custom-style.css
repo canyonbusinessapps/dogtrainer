@@ -408,7 +408,7 @@ header#masthead nav.navbar{
     font-family:"Noto Sans" !important;	
 }
 .make_app_textarea{
-    height: 270px !important;
+    /*height: 270px !important;*/
     font-family:"Noto Sans" !important;	
 }
 .make_app_select{
@@ -1268,4 +1268,14 @@ a.back_our_team:link, a.back_our_team:hover, a.back_our_team:visited{
 }
 .testimonial-image{
     transform: translate(-20px, 20px);
+}
+.contact_touch_bg{
+    background: url(../images/get_in_touch.png) no-repeat center center;
+}
+.contact_home_bg{
+    background: url(../images/appointment.png) no-repeat center center;
+}
+a.appoinment_link:link, a.appoinment_link:hover, a.appoinment_link:visited{
+    text-decoration: none;
+    color: #000;
 }
