@@ -38,3 +38,37 @@ get_header();
 
 <?php
 get_footer();
+?>
+
+<div class="flex-container">
+    <div class="row">
+        <div class="col-md-3 service-box">
+            <a href="#" class="service-link">
+                <img src="http://dogtrainer.canyonbusiness.tech/wp-content/uploads/2020/05/icon_01.png" />
+                <h3 class="service-box-title">Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+        </div>
+        <div class="col-md-3 service-box-2">
+            <a href="#" class="service-link">
+                <img src="http://dogtrainer.canyonbusiness.tech/wp-content/uploads/2020/05/icon_02.png" />
+                <h3 class="service-box-title">Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+        </div>
+        <div class="col-md-3 service-box-3">
+            <a href="#" class="service-link">
+                <img src="http://dogtrainer.canyonbusiness.tech/wp-content/uploads/2020/05/icon_03.png" />
+                <h3 class="service-box-title">Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+        </div>
+        <div class="col-md-3 service-box-4">
+            <a href="#" class="service-link">
+                <img src="http://dogtrainer.canyonbusiness.tech/wp-content/uploads/2020/05/icon_04.png" />
+                <h3 class="service-box-title">Lorem Ipsum</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </a>
+        </div>
+    </div>
+</div>

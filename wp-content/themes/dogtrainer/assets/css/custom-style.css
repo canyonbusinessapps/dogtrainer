@@ -116,48 +116,57 @@ header#masthead{
     align-items: center;
 }
 .service-box{
-    background:#4D99E6 !important;
+    background:#4d99e6 !important;
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
-    padding: 20px !important;
+    padding: 40px 30px !important;
     margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
 }
 .service-box-2{
-    background:#3282D3 !important;
+    background:#3985d2 !important;
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
-    padding: 20px !important;
+    padding: 40px 30px !important;
     margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
-    height: 371px;
-    margin-top: -39px !important;
-    position: relative;
-    z-index: 9999;
 }
 .service-box-3{
     background:#2075CA !important;
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
-    padding: 20px !important;
+    padding: 40px 30px !important;
     margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
 }
 .service-box-4{
-    background:#1B6BBC !important;
+    background:#1b6bbc !important;
     -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
     box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
-    padding: 20px !important;
+    padding: 40px 30px !important;
     margin: 0px !important;
     color: #FFFFFF;
     text-align: center;
+}
+.service-box:hover, .service-box-2:hover, .service-box-3:hover, .service-box-4:hover{
+    background:#3282D3 !important;
+    -webkit-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 10px 30px -20px rgba(0,0,0,0.75);
+    box-shadow: 5px 10px 30px -20px 20px(0,0,0,0.75);
+    padding: 40px 30px !important;
+    margin: 0px !important;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: -39px !important;
+    position: relative;
+    z-index: 9999;
 }
 .service-box:nth-child(2)
 {
@@ -175,10 +184,16 @@ header#masthead{
 {
     margin:0px 40px;
 }
-
+a.service-link:link, a.service-link:hover, a.service-link:visited{
+    text-decoration: none;
+    color: #FFF;
+    display: block;
+}
 .service-box-title{
-    font-size: 24px !important;
-    margin-top: 20px;
+    font-size: 26px !important;
+    font-weight: 600;
+    font-family:Poppins !important;
+    margin-top: 25px;
 }
 .nopadding {
     padding: 0 !important;
