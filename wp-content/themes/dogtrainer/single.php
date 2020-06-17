@@ -42,7 +42,7 @@ get_header();
             <div class="col-md-8">
                 <h2 class="team_title"><?php echo get_the_title(); ?></h2>
                 <h2 class="team_designation"><?php echo types_render_field("designation"); ?></h2>
-                <div class="social_icon">
+                <div class="social_icon" style="display: none;">
                     <ul>
                         <li>
                             <a href="<?= types_render_field("facebook") ?>" target="_blank">
@@ -66,7 +66,7 @@ get_header();
                         </li>
                     </ul> 
                 </div>
-                <p><?= get_the_content() ?></p>
+                <p><?php the_content('Read More'); ?></p>
             </div>
             <?php
         endwhile; // End the loop.

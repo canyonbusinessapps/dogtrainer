@@ -877,9 +877,12 @@ function meet_our_team($atts) {
                     <div class="content-details fadeIn-bottom">
                         <a href="<?php echo get_permalink($post_id) ?>" target="_blank">
                             <h3 class="content-title"><?php echo get_the_title(); ?></h3>
-                            <p class="content-text"><?= wp_trim_words(get_the_content(), 15) ?></p>
+                            <p class="content-text">
+                                <?php //echo wp_trim_words(get_the_content(), 15) ?>
+                                <?= types_render_field("hover-text") ?>
+                            </p>
                         </a>
-                        <div class="social_icon">
+                        <div class="social_icon" style="display: none;">
                             <ul id="<?= $post_id ?>">
                                 <li>
                                     <a href="<?= types_render_field("facebook") ?>" target="_blank">
