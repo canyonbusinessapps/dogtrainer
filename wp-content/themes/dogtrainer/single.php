@@ -24,7 +24,7 @@ get_header();
         color: #555 !important;
     }
 </style>
-<div class="container margin_top_210 margin_bottom_105">
+<div class="container margin_top_210 margin_bottom_50">
     <div class="row" style="padding-bottom: 40px;">
         <div class="col-md-12">
             <a href="<?= esc_url(get_page_link(13)) ?>" class="back_our_team">< Back</a>
@@ -37,7 +37,7 @@ get_header();
             the_post();
             ?>
             <div class="col-md-4">
-                <?php echo types_render_field("picture", array("alt" => get_the_title(), "proportional" => "false", "class" => "content-image img_" . $post_id . " ")); ?>
+                <?php echo types_render_field("picture", array("alt" => get_the_title(), "proportional" => "false", "class" => "content-image margin_bottom_20")); ?>
             </div>
             <div class="col-md-8">
                 <h2 class="team_title"><?php echo get_the_title(); ?></h2>

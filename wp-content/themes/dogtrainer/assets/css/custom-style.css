@@ -1116,7 +1116,7 @@ h3{
     font-weight: 600;
     line-height: 40px;
     margin-bottom: 15px !important;
-    margin-top: 40px !important;
+    /*margin-top: 40px !important;*/
 }
 .team_inner .team_designation{
     font-size: 16px;
